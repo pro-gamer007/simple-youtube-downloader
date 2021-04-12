@@ -10,7 +10,7 @@ I hate viruses and i have the fear of getting one that can mess up with my pc. B
 # **Setup**
 Run **`npm i`** to download all dependencies.
 
-Then run **`npm test`** and type in the youtube link!
+Then run **`npm start`** and type in the youtube link!
 
 After running find the **`output.mp4`** file and your done!
 
