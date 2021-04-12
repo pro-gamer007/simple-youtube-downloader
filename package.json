@@ -1,0 +1,27 @@
+{
+  "name": "simple-youtube-downloader",
+  "version": "1.0.0",
+  "description": "I was bored and i needed to download a yt vid for a reason so i ended up making this 😳:trollface:",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pro-gamer007/simple-youtube-downloader.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pro-gamer007/simple-youtube-downloader/issues"
+  },
+  "homepage": "https://github.com/pro-gamer007/simple-youtube-downloader#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "eslint": "^7.24.0",
+    "fs": "0.0.1-security",
+    "readline": "^1.3.0",
+    "ytdl-core": "^4.5.0"
+  }
+}
