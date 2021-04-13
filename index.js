@@ -1,12 +1,34 @@
-// -- Dependencies -- \\
-const readline = require('readline').createInterface({ input: process.stdin, output: process.stdout });
-const fs = require('fs');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const ytdl = require('ytdl-core');
-const chalk = require('chalk');
+const fs = require('fs');
 
-readline.question(chalk.redBright('Please enter a youtube link for me to download!\n'), link => {
-	ytdl(link).pipe(fs.createWriteStream('output.mp4'));
-	console.log('Video has been downloaded. Please check the ' + chalk.blueBright('output.mp4 ') + 'file for your video!');
-	console.log(chalk.redBright('Thanks for using my program! Have fun!'));
-	readline.close();
+function createWindow() {
+	const win = new BrowserWindow({
+		width: 1920 / 2,
+		height: 1080 / 2,
+		webPreferences: {
+			nodeIntegration: true,
+			contextIsolation: false,
+		},
+	});
+	win.loadFile('index.html');
+}
+
+app.whenReady().then(() => {
+	createWindow();
+	app.on('activate', () => {
+		if (BrowserWindow.getAllWindows().length === 0) {
+			createWindow();
+		}
+	});
+});
+
+app.on('window-all-closed', () => {
+	if (process.platform !== 'darwin') {
+		app.quit();
+	}
+});
+
+ipcMain.on('link', (event, arg) => {
+	ytdl(arg).pipe(fs.createWriteStream('output.mp4'));
 });
