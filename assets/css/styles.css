@@ -1,0 +1,21 @@
+body {
+  background-color: var(--background);
+}
+
+:root {
+  --background: #181818;
+}
+
+h1 {
+  color: white;
+  font-family: Roboto;
+}
+
+input {
+  width: 350px;
+}
+
+.btn.btn-primary {
+  background-color: red;
+}
+

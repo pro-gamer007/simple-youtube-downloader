@@ -7,10 +7,19 @@ I hate viruses and i have the fear of getting one that can mess up with my pc. B
 
 [Ram](https://downloadmoreram.com/)
 
-# **Setup**
-Run **`npm i`** to download all dependencies.
+# **GUI Setup**
+Clone this repository or download the zip file from github.
 
-Then run **`npm test`** and type in the youtube link!
+Run **`npm start`** to download all dependencies and start up the gui.
+
+After you've done that just paste in the youtube link in the text box and press download! 
+
+you will find the video in the **`output.mp4`** file in the directory you cloned this repository in!
+
+# **Cmd-Line Setup**
+Clone this repository or download the zip file from github.
+
+Run **`npm run cmd`** and type in the youtube link!
 
 After running find the **`output.mp4`** file and your done!
 
