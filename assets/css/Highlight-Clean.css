@@ -1,6 +1,6 @@
 .highlight-clean {
   color: #ffffff;
-  background-color: var(--background);
+  background-color: rgba(24,24,24,0);
   padding: 50px 0;
 }
 
@@ -15,6 +15,9 @@
   padding-top: 0;
   margin-top: 0;
   color: inherit;
+  font-family: 'Roboto';
+  font-size: 49px;
+  transform: scale(.5, .5);
 }
 
 .highlight-clean .intro {
