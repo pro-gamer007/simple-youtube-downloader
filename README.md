@@ -2,7 +2,16 @@
 I hate viruses and i have the fear of getting one that can mess up with my pc. Because of that i chose to make this so that i wouldnt have the fear of downloading a virus instead of the rick roll i wanted to download 😉
 <br/>
 
-# **Requirements**
+# **The App**
+Youtube Downloader 2.0 is now avaliable as an app! You can download it here:
+
+Windows: [Here!](https://github.com/pro-gamer007/simple-youtube-downloader/releases/tag/2.0.0)
+
+Currently youtube-downloader is avaliable only for windows (unless you can run wine on linux and run the exe).
+
+If you would like it for your platform you can follow the instructions bellow for `GUI` and `Cmd line` setup
+
+# **Requirements (for GUI and Cmd line setup's)**
 [Node.js](https://nodejs.org/)
 
 [Ram](https://downloadmoreram.com/)

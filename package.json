@@ -1,33 +1,47 @@
 {
-  "name": "simple-youtube-downloader",
-  "version": "1.0.0",
-  "description": "I was bored and i needed to download a yt vid for a reason so i ended up making this 😳:trollface:",
-  "main": "index.js",
-  "scripts": {
-    "start": "npm i && electron .",
-    "test": "electron .",
-    "cmd": "npm i && node cmd-line.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pro-gamer007/simple-youtube-downloader.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pro-gamer007/simple-youtube-downloader/issues"
-  },
-  "homepage": "https://github.com/pro-gamer007/simple-youtube-downloader#readme",
-  "dependencies": {
-    "chalk": "^4.1.0",
-    "fs": "0.0.1-security",
-    "jquery": "^3.6.0",
-    "readline": "^1.3.0",
-    "ytdl-core": "^4.5.0"
-  },
-  "devDependencies": {
-    "electron": "^12.0.2",
-    "eslint": "^7.24.0"
-  }
+	"name": "simple-youtube-downloader",
+	"version": "2.0.0",
+	"description": "I hate viruses and i have the fear of getting one that can mess up with my pc. Because of that i chose to make this so that i wouldnt have the fear of downloading a virus instead of the rick roll i wanted to download",
+	"main": "index.js",
+	"scripts": {
+		"start": "npm i && electron .",
+		"test": "electron .",
+		"cmd": "npm i && node cmd-line.js",
+		"pack": "electron-builder --dir",
+		"dist": "electron-builder"
+	},
+	"build": {
+		"productName": "youtube-downloader",
+		"copyright": "Copyright © 2021 pro-gamer007",
+		"mac": {
+			"target": "dmg",
+			"category": "public.app-category.utilities"
+		},
+		"linux": {
+			"target": "AppImage"
+		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pro-gamer007/simple-youtube-downloader.git"
+	},
+	"keywords": [],
+	"author": "pro-gamer007",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/pro-gamer007/simple-youtube-downloader/issues"
+	},
+	"homepage": "https://github.com/pro-gamer007/simple-youtube-downloader#readme",
+	"dependencies": {
+		"chalk": "^4.1.0",
+		"fs": "0.0.1-security",
+		"jquery": "^3.6.0",
+		"readline": "^1.3.0",
+		"ytdl-core": "^4.5.0"
+	},
+	"devDependencies": {
+		"electron": "^12.0.2",
+		"electron-builder": "^22.10.5",
+		"eslint": "^7.24.0"
+	}
 }
