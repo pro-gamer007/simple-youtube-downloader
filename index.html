@@ -29,12 +29,18 @@
 					title="The link of the youtube video you want to download.">
 			</div>
 			<div class="flex-shrink-0 buttons" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="50"><button
-					class="btn btn-primary text-capitalize text-center" id="download" type="submit">Download
+					class="btn btn-primary text-capitalize text-center" id="download" type="submit"
+					onclick="window.open('output.mp4')">Download
 					<script>
 						document.querySelector('#download').addEventListener('click', function () {
 							const { ipcRenderer } = require('electron')
 							const link = document.getElementById('link').value;
 							ipcRenderer.send('link', link)
+							const a = document.createElement('a');
+							a.href = '/output.mp4';
+							a.target = "_blank";
+							a.download = "output.mp4";
+							a.click();
 						})
 					</script>
 				</button></div>
