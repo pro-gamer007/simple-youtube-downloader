@@ -5,11 +5,9 @@ I hate viruses and i have the fear of getting one that can mess up with my pc. B
 # **The App**
 Youtube Downloader 2.0 is now avaliable as an app! You can download it here:
 
-Windows: [Here!](https://github.com/pro-gamer007/simple-youtube-downloader/releases/tag/2.0.0)
+Windows, Mac, and Linux: [Here!](https://github.com/pro-gamer007/simple-youtube-downloader/releases/tag/mac.windows.2.0.0)
 
-Currently youtube-downloader is avaliable only for windows (unless you can run wine on linux and run the exe).
-
-If you would like it for your platform you can follow the instructions bellow for `GUI` and `Cmd line` setup
+If youtube-downloader is not working properly, isnt supported for your platform, or you wouldnt want to download an app, you can follow the steps for GUI/Cmd-line setup.
 
 # **Requirements (for GUI and Cmd line setup's)**
 [Node.js](https://nodejs.org/)
