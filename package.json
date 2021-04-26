@@ -1,5 +1,6 @@
 {
 	"name": "simple-youtube-downloader",
+	"email": "yeetgamer473@gmail.com",
 	"version": "2.0.0",
 	"description": "I hate viruses and i have the fear of getting one that can mess up with my pc. Because of that i chose to make this so that i wouldnt have the fear of downloading a virus instead of the rick roll i wanted to download",
 	"main": "index.js",
@@ -8,7 +9,7 @@
 		"test": "electron .",
 		"cmd": "npm i && node cmd-line.js",
 		"pack": "electron-builder --dir",
-		"dist": "electron-builder"
+		"dist": "electron-builder -mwl"
 	},
 	"build": {
 		"productName": "youtube-downloader",
@@ -18,7 +19,8 @@
 			"category": "public.app-category.utilities"
 		},
 		"linux": {
-			"target": "AppImage"
+			"target": "deb",
+			"maintainer": "yeetgamer473@gmail.com"
 		}
 	},
 	"repository": {
