@@ -35,6 +35,6 @@ ipcMain.on('link', async(event, arg) => {
 	    defaultPath: 'output.mp4'
   	});
   	if (filePath) {
-    		fs.writeFile(filePath, video);
+    		fs.writeFile(filePath, video, () => console.log(`[${Date.now}] video saved.`));
   	}
 });
