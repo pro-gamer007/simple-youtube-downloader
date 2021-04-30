@@ -36,11 +36,6 @@
 							const { ipcRenderer } = require('electron')
 							const link = document.getElementById('link').value;
 							ipcRenderer.send('link', link)
-							const a = document.createElement('a');
-							a.href = '/output.mp4';
-							a.target = "_blank";
-							a.download = "output.mp4";
-							a.click();
 						})
 					</script>
 				</button></div>
