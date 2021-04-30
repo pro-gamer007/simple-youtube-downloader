@@ -30,11 +30,10 @@ app.on('window-all-closed', () => {
 });
 
 ipcMain.on('link', async(event, arg) => {
-	const video = ytdl(arg)
 	const { filePath } = await dialog.showSaveDialog({
 	    defaultPath: 'output.mp4'
   	});
   	if (filePath) {
-    		fs.writeFile(filePath, video, () => console.log(`[${Date.now}] video saved.`));
+		ytdl(arg).pipe(fs.createWriteStream(filepath));
   	}
 });
