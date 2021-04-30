@@ -1,5 +1,4 @@
-const { app, BrowserWindow, ipcMain, remote } = require('electron');
-const { dialog } = remote;
+const { app, BrowserWindow, ipcMain, dialog } = require('electron');
 const ytdl = require('ytdl-core');
 const fs = require('fs');
 
@@ -10,7 +9,6 @@ function createWindow() {
 		webPreferences: {
 			nodeIntegration: true,
 			contextIsolation: false,
-			enableRemoteModule: true,
 		},
 	});
 	win.loadFile('index.html');
