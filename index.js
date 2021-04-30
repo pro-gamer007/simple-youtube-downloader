@@ -1,4 +1,5 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, remote } = require('electron');
+const { dialog } = remote;
 const ytdl = require('ytdl-core');
 const fs = require('fs');
 
@@ -30,5 +31,11 @@ app.on('window-all-closed', () => {
 });
 
 ipcMain.on('link', (event, arg) => {
-	ytdl(arg).pipe(fs.createWriteStream('output.mp4'));
+	const video = ytdl(arg)
+	const { filePath } = await dialog.showSaveDialog({
+	    defaultPath: 'output.mp4'
+  	});
+  	if (filePath) {
+    		fs.writeFile(filePath, video);
+  	}
 });
