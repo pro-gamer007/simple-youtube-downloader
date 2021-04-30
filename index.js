@@ -34,6 +34,6 @@ ipcMain.on('link', async(event, arg) => {
 	    defaultPath: 'output.mp4'
   	});
   	if (filePath) {
-		ytdl(arg).pipe(fs.createWriteStream(filepath));
+		ytdl(arg).pipe(fs.createWriteStream(filePath));
   	}
 });
