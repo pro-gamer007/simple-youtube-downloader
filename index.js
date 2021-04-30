@@ -10,6 +10,7 @@ function createWindow() {
 		webPreferences: {
 			nodeIntegration: true,
 			contextIsolation: false,
+			enableRemoteModule: true,
 		},
 	});
 	win.loadFile('index.html');
@@ -30,7 +31,7 @@ app.on('window-all-closed', () => {
 	}
 });
 
-ipcMain.on('link', (event, arg) => {
+ipcMain.on('link', async(event, arg) => {
 	const video = ytdl(arg)
 	const { filePath } = await dialog.showSaveDialog({
 	    defaultPath: 'output.mp4'
