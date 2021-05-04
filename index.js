@@ -1,9 +1,10 @@
-const { app, BrowserWindow, ipcMain, dialog } = require('electron');
+const { app, BrowserWindow, ipcMain, dialog, Tray, Menu } = require('electron');
 const ytdl = require('ytdl-core');
 const fs = require('fs');
 
+let win = null;
 function createWindow() {
-	const win = new BrowserWindow({
+	win = new BrowserWindow({
 		width: 1920 / 2,
 		height: 1080 / 2,
 		webPreferences: {
@@ -14,8 +15,22 @@ function createWindow() {
 	win.loadFile('index.html');
 }
 
+let tray = null;
 app.whenReady().then(() => {
 	createWindow();
+	tray = new Tray('./logo.jpeg');
+	const contextMenu = Menu.buildFromTemplate([
+		{
+			label: 'Close',
+			click() { app.quit(); },
+		},
+		{
+			label: 'Open',
+			click() { win.show(); },
+		},
+	]);
+	tray.setToolTip('Youtube Downloader.');
+	tray.setContextMenu(contextMenu);
 	app.on('activate', () => {
 		if (BrowserWindow.getAllWindows().length === 0) {
 			createWindow();
