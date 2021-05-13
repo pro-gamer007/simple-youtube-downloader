@@ -11,6 +11,7 @@ function createWindow() {
 			nodeIntegration: true,
 			contextIsolation: false,
 		},
+		icon: __dirname + '/logo.png',
 	});
 	win.loadFile('index.html');
 }
@@ -18,7 +19,7 @@ function createWindow() {
 let tray = null;
 app.whenReady().then(() => {
 	createWindow();
-	tray = new Tray('./logo.jpeg');
+	tray = new Tray('./tray.png');
 	const contextMenu = Menu.buildFromTemplate([
 		{
 			label: 'Close',
