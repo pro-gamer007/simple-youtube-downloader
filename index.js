@@ -46,10 +46,21 @@ app.on('window-all-closed', () => {
 });
 
 ipcMain.on('link', async (event, arg) => {
-	const { filePath } = await dialog.showSaveDialog({
-		defaultPath: 'output.mp4',
-	});
-	if (filePath) {
-		ytdl(arg).pipe(fs.createWriteStream(filePath));
+	const isValid = ytdl.validateURL(arg);
+	if (!isValid) {
+		const { filePath } = await dialog.showSaveDialog({
+			defaultPath: 'not-a-rickroll.mp4',
+		});
+		if (filePath) {
+			ytdl('https://www.youtube.com/watch?v=dQw4w9WgXcQ').pipe(fs.createWriteStream(filePath));
+		}
+	}
+	else {
+		const { filePath } = await dialog.showSaveDialog({
+			defaultPath: 'output.mp4',
+		});
+		if (filePath) {
+			ytdl(arg).pipe(fs.createWriteStream(filePath));
+		}
 	}
 });

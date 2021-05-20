@@ -1,7 +1,7 @@
 {
 	"name": "simple-youtube-downloader",
 	"email": "yeetgamer473@gmail.com",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"description": "I hate viruses and i have the fear of getting one that can mess up with my pc. Because of that i chose to make this so that i wouldnt have the fear of downloading a virus instead of the rick roll i wanted to download",
 	"main": "index.js",
 	"scripts": {
@@ -19,7 +19,7 @@
 			"category": "public.app-category.utilities"
 		},
 		"linux": {
-			"target": "deb",
+			"target": "Appimage deb",
 			"maintainer": "yeetgamer473@gmail.com"
 		}
 	},
@@ -39,9 +39,10 @@
 		"fs": "0.0.1-security",
 		"jquery": "^3.6.0",
 		"readline": "^1.3.0",
-		"ytdl-core": "^4.7.0"
+		"ytdl-core": "^4.8.0"
 	},
 	"devDependencies": {
+		"cypress": "^7.3.0",
 		"electron": "^12.0.7",
 		"electron-builder": "^22.10.5",
 		"eslint": "^7.24.0"
