@@ -1,0 +1,9 @@
+version: 2.0.0
+files:
+  - url: youtube-downloader-2.0.0.AppImage
+    sha512: GVMlc7n2AbJlPzJssf9eHoEQGm3/WW9mF6f1xXU6tufPiKyDwl/hJhL+GfHi/syTqAPS7s/noPl+uN2t/7AExA==
+    size: 81178956
+    blockMapSize: 86368
+path: youtube-downloader-2.0.0.AppImage
+sha512: GVMlc7n2AbJlPzJssf9eHoEQGm3/WW9mF6f1xXU6tufPiKyDwl/hJhL+GfHi/syTqAPS7s/noPl+uN2t/7AExA==
+releaseDate: '2021-04-26T10:31:38.976Z'

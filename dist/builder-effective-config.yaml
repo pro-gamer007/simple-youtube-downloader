@@ -1,0 +1,12 @@
+directories:
+  output: dist
+  buildResources: build
+productName: youtube-downloader
+copyright: Copyright © 2021 pro-gamer007
+mac:
+  target: dmg
+  category: public.app-category.utilities
+linux:
+  target: deb
+  maintainer: yeetgamer473@gmail.com
+electronVersion: 12.0.2

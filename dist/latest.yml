@@ -1,0 +1,8 @@
+version: 2.0.0
+files:
+  - url: youtube-downloader-Setup-2.0.0.exe
+    sha512: SjC+9FcKbv1FvTq/bKxbLzoBylcNCOGoKl93U1tbZxYHS8dGfhgmIvZCB1boZcmtEKF1ghfHgrlsaSYdh5vVjw==
+    size: 58980995
+path: youtube-downloader-Setup-2.0.0.exe
+sha512: SjC+9FcKbv1FvTq/bKxbLzoBylcNCOGoKl93U1tbZxYHS8dGfhgmIvZCB1boZcmtEKF1ghfHgrlsaSYdh5vVjw==
+releaseDate: '2021-07-25T16:29:14.849Z'
